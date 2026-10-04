@@ -1,0 +1,23 @@
+{
+  "name": "onyx-ai-eg",
+  "version": "1.0.0",
+  "description": "منصة إدارة المشاريع الذكية العربية - Onyx AI Egypt",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "db:setup": "cd packages/database && npm run migrate",
+    "db:seed": "cd packages/database && npm run seed"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.0",
+    "prettier": "^3.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
